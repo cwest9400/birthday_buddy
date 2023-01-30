@@ -1,4 +1,7 @@
 import Header from "./components/header";
+import Landing from "./pages/landing";
+import Dashboard from "./pages/dashboard";
+import{ Route, Routes } from 'react-router-dom'
 import './style/cssDev.css'
 // import './App.css';
 
@@ -8,7 +11,14 @@ function App() {
     <header>
       <Header/>
     </header>
-   <h1>hello</h1>
+   <main>
+    <Routes>
+    <Route path="/" element={<Landing/>} />
+    <Route path="/dashboard" element={<Dashboard/>}/>
+    </Routes>
+
+
+    </main>
    </div>
   );
 }
