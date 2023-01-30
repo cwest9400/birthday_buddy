@@ -29,3 +29,11 @@ nav {
     margin-top: 100px;
     max-width: 400px;
 }
+.date-container {
+    display: flex;
+    gap: 24px;
+    flex-wrap: wrap;
+}
+.date-card {
+    background-color: gainsboro;
+}
