@@ -128,8 +128,8 @@ return (
                 {birthdays.map((person)=>{
                     const dateConversion = moment(person.birthday).format("dddd, MMM Do")
                     return (
-                        <Link to={`/dashboard/birthdaybook/${person._id}`}>
-                        <BirthdayCard key={person._id} _id={person._id} firstName={person.firstName} lastName={person.lastName} birthday={dateConversion} />
+                        <Link  key={person._id} to={`/dashboard/birthdaybook/${person._id}`}>
+                        <BirthdayCard _id={person._id} firstName={person.firstName} lastName={person.lastName} birthday={dateConversion} />
                         </Link>
                     )
                 }
