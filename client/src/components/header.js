@@ -1,4 +1,4 @@
-
+import { Link } from "react-router-dom"
 
 export default function Header() {
     //if logged in return 'logout' nav instead
@@ -8,7 +8,10 @@ export default function Header() {
             <div>about</div>
             <div>sign in</div>
             /
-            <div>sign up</div>
+            <Link to={'/signup'}>
+                <div>sign up</div>
+                </Link>
+            
             </nav>
     )
 }

@@ -3,7 +3,9 @@ import Landing from "./pages/landing";
 import Dashboard from "./pages/dashboard";
 import BirthdayBook from "./pages/birthdayBook";
 import UpdateBirthday from "./pages/updateBirthday";
+import SignUp from "./pages/signup";
 import{ Route, Routes } from 'react-router-dom'
+
 import './style/cssDev.css'
 // import './App.css';
 
@@ -19,6 +21,7 @@ function App() {
     <Route path="/dashboard" element={<Dashboard/>}/>
     <Route path="/dashboard/birthdaybook" element={<BirthdayBook/>}/>
     <Route path="/dashboard/birthdaybook/:id" element={<UpdateBirthday/>}/>
+    <Route path="/signup" element={<SignUp/>}/>
     </Routes>
 
 
