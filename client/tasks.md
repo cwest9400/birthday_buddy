@@ -11,6 +11,9 @@
 - **DONE** > build sign up form, attach to links/button
 - **DONE** > build sign in form
 - auth
+   **DONE** - installed dependencies
+   **DONE** - created user model
+    
 
 ## wednesday, feb 01
 
@@ -19,3 +22,4 @@
 ## loose ends
 - format date on update birthday page
 - sort dashboard by closest date
+- update state on birthday book page when a card is deleted (instead of manual refresh)
