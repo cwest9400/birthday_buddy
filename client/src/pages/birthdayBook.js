@@ -1,6 +1,7 @@
 import { Link } from "react-router-dom"
 import BirthdayCard from "../components/birthdayCard"
 import { useState, useEffect } from "react"
+import moment from "moment"
 import "../style/cssDev.css"
 
 export default function BirthdayBook() {
@@ -12,6 +13,7 @@ export default function BirthdayBook() {
             setBirthdays(json)
         })
         .catch(console.error)
+        //make this a better error
     }, [])
 console.log(birthdays)
     return (
@@ -28,8 +30,9 @@ console.log(birthdays)
             <h2>up coming birthdays</h2>
             <div className="date-container">
                 {birthdays.map((person)=>{
+                    const dateConversion = moment(person.birthday).format("dddd, MMM Do")
                     return (
-                        <BirthdayCard key={person._id} firstName={person.firstName} lastName={person.lastName} birthday={person.birthday} />
+                        <BirthdayCard key={person._id} firstName={person.firstName} lastName={person.lastName} birthday={dateConversion} />
                     )
                 }
                 )}

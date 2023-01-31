@@ -1,8 +1,22 @@
 import { Link } from "react-router-dom"
 import DateCard from "../components/dateCard"
+import { useState, useEffect } from "react"
 import "../style/cssDev.css"
+import moment from "moment"
 
 export default function Dashboard() {
+    const [birthdays, setBirthdays] = useState([])
+    useEffect(() => {
+        fetch("http://127.0.0.1:4000/birthdays")
+        .then((res) => res.json())
+        .then((json) => {
+            setBirthdays(json)
+        })
+        .catch(console.error)
+        //make this a better error
+    }, [])
+console.log(birthdays)
+
     return (
         <div className="dashboard-container">
             <h1>Dashboard</h1>
@@ -16,10 +30,15 @@ export default function Dashboard() {
             </div>
             <h2>up coming birthdays</h2>
         <div className= "date-container">
-            <DateCard />
-            <DateCard />
-            <DateCard />
-            <DateCard />
+        {birthdays.map((person)=>{
+            const dateConversion = moment(person.birthday).format("dddd, MMM Do")
+            //countdown - fix it
+            const newDate = moment(person.birthday).endOf('day').fromNow();
+                    return (
+                        <DateCard key={person._id} firstName={person.firstName} lastName={person.lastName} birthday={dateConversion} />
+                    )
+                }
+                )}
 
 
         </div>
