@@ -8,13 +8,12 @@
     - went slow
 - **DONE** > attach delete req to delete button
     - went slow
-- build sign up form, attach to links/button
-- build sign in form
+- **DONE** > build sign up form, attach to links/button
+- **DONE** > build sign in form
 - auth
 
 ## wednesday, feb 01
-- build sign up form, attach to links/button
-- build sign in form
+
 - auth
 
 ## loose ends
