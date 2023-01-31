@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react"
 import { Link, useParams, useNavigate } from 'react-router-dom'
+import moment from "moment"
 
 export default function UdpateBirthday(props) {
     // const id = props._id
@@ -18,7 +19,7 @@ export default function UdpateBirthday(props) {
             const response = await fetch(URL)
             const foundBirthday = await response.json()
             setBirthday(foundBirthday)
-            setEditBirthday(foundBirthday)
+            // setEditBirthday(foundBirthday)
         } catch (err) {
             console.log(err)
         }
@@ -62,40 +63,40 @@ export default function UdpateBirthday(props) {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="firstName">
-                        <p>First Name</p>
+                        <p>{birthday.firstName}</p>
                         <input
                             type="text"
                             id="firstName"
                             name="firstName"
                             placeholder="*First Name"
-                            value={birthday.firstName}
+                            value={editBirthday.firstName}
                             onChange={handleChange}
                         />
                     </label>
                 </div>
                 <div>
                     <label htmlFor="lastName">
-                        <p>Last Name</p>
+                        <p>{birthday.lastName}</p>
                         <input
                             type="text"
                             id="lastName"
                             name="lastName"
                             placeholder="Last Name"
-                            value={birthday.lastName}
+                            value={editBirthday.lastName}
                             onChange={handleChange}
                         />
                     </label>
                 </div>
                 <div>
                         <label htmlFor="birthday">
-                            <p>BirthdayCard</p>
+                            <p>{birthday.birthday}</p>
                             <input
                                 required={true}
                                 type="date"
                                 id="birthday"
                                 name="birthday"
                                 placeholder="MM/DD"
-                                value={birthday.birthday}
+                                value={editBirthday.birthday}
                                 onChange={handleChange}
                                 />
                                 <p>*just pick the month and date, the year doesn't matter.</p>
