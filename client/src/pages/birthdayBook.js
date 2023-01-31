@@ -37,7 +37,7 @@ const handleSubmit = async (e) => {
     try {
         const requestOptions = {
             method: "POST",
-            header: {
+            headers: {
                 "Content-Type": "application/json"
             },
             body: JSON.stringify(currentState)
@@ -85,7 +85,7 @@ return (
                                 type="text"
                                 id="firstName"
                                 name="firstName"
-                                placeholder="First Name"
+                                placeholder="*First Name"
                                 value={newBirthday.firstName}
                                 onChange={handleChange}
                                 />
@@ -116,7 +116,7 @@ return (
                                 value={newBirthday.birthday}
                                 onChange={handleChange}
                                 />
-                                *the year is not required
+                                *just pick the month and date, the year doesn't matter.
                         </label>
                     </div>
                     <input type="submit" value="add to your birthday book" />
@@ -128,7 +128,9 @@ return (
                 {birthdays.map((person)=>{
                     const dateConversion = moment(person.birthday).format("dddd, MMM Do")
                     return (
-                        <BirthdayCard key={person._id} firstName={person.firstName} lastName={person.lastName} birthday={dateConversion} />
+                        <Link to={`/dashboard/birthdaybook/${person._id}`}>
+                        <BirthdayCard key={person._id} _id={person._id} firstName={person.firstName} lastName={person.lastName} birthday={dateConversion} />
+                        </Link>
                     )
                 }
                 )}
