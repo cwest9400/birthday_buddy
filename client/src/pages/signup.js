@@ -1,5 +1,9 @@
+// import { useState, useEffect } from 'react'
+
+
 export default function SignUp() {
     
+
     return (
         <div>
             <h1>sign up form</h1>

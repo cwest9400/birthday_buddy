@@ -17,11 +17,17 @@ function App() {
     </header>
    <main>
     <Routes>
+    {/*  "/" will be sign up */}
     <Route path="/" element={<Landing/>} />
+    {/* "/dashboard" will be like the user profile page
+    it will probably need to change to reflect the logged in user id */}
     <Route path="/dashboard" element={<Dashboard/>}/>
+    {/* need to change to reflect the logged in user id */}
     <Route path="/dashboard/birthdaybook" element={<BirthdayBook/>}/>
+    {/* need to change to reflect the logged in user id */}
     <Route path="/dashboard/birthdaybook/:id" element={<UpdateBirthday/>}/>
-    <Route path="/signup" element={<SignUp/>}/>
+    {/* "/register" will be for registering new users */}
+    <Route path="/register" element={<SignUp/>}/>
     </Routes>
 
 

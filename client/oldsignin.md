@@ -1,13 +1,12 @@
-
 import { useNavigate } from 'react-router-dom'
-import { useEffect } from 'react'
+import { useState, useEffect } from 'react'
 
 
 
 export default function SignIn() {
     const navigate = useNavigate()
     
-    function handleLogin(e) {
+    function handleSignIn(e) {
         e.preventDefault()
         
         const form = e.target
@@ -17,7 +16,7 @@ export default function SignIn() {
             password: form[1].value
         }
         //refactor
-        fetch("http://127.0.0.1:4000/login", {
+        fetch("/login", {
             method: "POST",
             headers: {
                 "Content-type": "application/json"
@@ -32,19 +31,18 @@ export default function SignIn() {
 
 
         useEffect(() => {
-            fetch("http://127.0.0.1:4000/isUserAuth", {
+            fetch("/isUserAuth", {
                 headers: {
                     "x-access-token": localStorage.getItem("token")
                 }
             })
                 .then(res => res.json())
                 .then(data => data.isLoggedIn ? navigate("/dashboard") : null)
-                
         }, [])
     return (
         <div>
             <h1>Sign in</h1>
-            <form onSubmit={event => handleLogin(event)}>
+            <form onSubmit={event => handleSignIn(event)}>
 
                 <p>Email</p>
                 <input required type="email" />
@@ -56,4 +54,3 @@ export default function SignIn() {
         </div>
     )
 }
-
