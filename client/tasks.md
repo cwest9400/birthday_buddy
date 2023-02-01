@@ -13,11 +13,14 @@
 - auth
    **DONE** - installed dependencies
    **DONE** - created user model
+   **DONE** - created register route
+   **DONE** - created loggin route
     
 
 ## wednesday, feb 01
-
 - auth
+    - finish backend stuff
+    - front end stuff (connecting routes)
 
 ## loose ends
 - format date on update birthday page
