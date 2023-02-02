@@ -1,4 +1,4 @@
-import { Link, useParams } from "react-router-dom"
+import { Link } from "react-router-dom"
 import BirthdayCard from "../components/birthdayCard"
 import { useState, useEffect } from "react"
 import moment from "moment"

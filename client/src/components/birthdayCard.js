@@ -1,4 +1,4 @@
-// import { useState, useEffect } from 'react'
+
 
 
 export default function BirthdayCard(props) {
@@ -8,7 +8,7 @@ export default function BirthdayCard(props) {
     const id = props._id
     
     // local testing use: const URL = `http://127.0.0.1:4000/birthdays/${id}`
-    const URL = `https://birthdaybuddy.herokuapp.com/birthdays/${id}`
+    // const URL = `https://birthdaybuddy.herokuapp.com/birthdays/${id}`
     
     
     // const deleteBirthday = async (e) => {

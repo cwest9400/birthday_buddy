@@ -39,5 +39,4 @@
 ## loose ends
 - format date on update birthday page
 - sort dashboard by closest date
-- update state on birthday book page when a card is deleted (instead of manual refresh)
-    - there's a bug to fix now - working but throwing error. refactor to detail page? or outside of the card component
+- Delete button on updateBirthday is throwing error but still working

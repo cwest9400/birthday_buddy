@@ -14,7 +14,7 @@ export default function UdpateBirthday(props) {
     
     //local testing use: `http://127.0.0.1:4000/birthdays/${id}`
     
-    const URL = `https://birthdaybuddy.herokuapp.com/${id}`
+    const URL = `https://birthdaybuddy.herokuapp.com/birthdays/${id}`
     
     const navigate = useNavigate()
 
