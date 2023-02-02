@@ -19,7 +19,7 @@ export default function UdpateBirthday(props) {
             const response = await fetch(URL)
             const foundBirthday = await response.json()
             setBirthday(foundBirthday)
-            // setEditBirthday(foundBirthday)
+            setEditBirthday(foundBirthday)
         } catch (err) {
             console.log(err)
         }
@@ -82,7 +82,7 @@ export default function UdpateBirthday(props) {
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="firstName">
-                        <p>{birthday.firstName}</p>
+                        {/* <p>{birthday.firstName}</p> */}
                         <input
                             type="text"
                             id="firstName"
@@ -95,7 +95,7 @@ export default function UdpateBirthday(props) {
                 </div>
                 <div>
                     <label htmlFor="lastName">
-                        <p>{birthday.lastName}</p>
+                        {/* <p>{birthday.lastName}</p> */}
                         <input
                             type="text"
                             id="lastName"
@@ -115,7 +115,7 @@ export default function UdpateBirthday(props) {
                                 id="birthday"
                                 name="birthday"
                                 placeholder="MM/DD"
-                                value={editBirthday.birthday}
+                                value={moment.utc(editBirthday.birthday).format('yyyy-MM-DD')}
                                 onChange={handleChange}
                                 />
                                 <p>*just pick the month and date, the year doesn't matter.</p>

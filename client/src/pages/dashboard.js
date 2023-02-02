@@ -10,6 +10,8 @@ export default function Dashboard() {
     const [birthdays, setBirthdays] = useState([])
     
     useEffect(() => {
+//if/else
+
         fetch(URL, {
             headers: {
                 "x-access-token": localStorage.getItem("token")
@@ -47,7 +49,8 @@ export default function Dashboard() {
             </div>
             <h2>up coming birthdays</h2>
             <div className="date-container">
-                {birthdays.map((person) => {
+                
+                {birthdays.length>0 && birthdays.map((person) => {
                     const dateConversion = moment(person.birthday).format("dddd, MMM Do")
                     //countdown - fix it
                     // const newDate = moment(person.birthday).endOf('day').fromNow();

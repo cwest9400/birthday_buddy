@@ -135,7 +135,8 @@ return (
             <h2>Birthday book</h2>
             <div className="date-container">
                 {birthdays.map((person)=>{
-                    const dateConversion = moment(person.birthday).format("dddd, MMM Do")
+                    
+                    const dateConversion = moment.utc(person.birthday).format("dddd, MMM Do")
                     return (
                         
                         <Link  key={person._id} to={`/dashboard/birthdaybook/${person._id}`}>
