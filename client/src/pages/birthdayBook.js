@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom"
+import { Link, useParams } from "react-router-dom"
 import BirthdayCard from "../components/birthdayCard"
 import { useState, useEffect } from "react"
 import moment from "moment"
@@ -16,8 +16,13 @@ export default function BirthdayBook() {
     
 const getBirthdays = async ()=> {
     try {
-        const response = await fetch(URL)
+        const response = await fetch(URL, {
+            headers: {
+                "x-access-token": localStorage.getItem("token")
+            }
+        })
         const allBirthdays = await response.json()
+        console.log(allBirthdays)
         setBirthdays(allBirthdays)
         // make a better error message
     } catch (err) {
@@ -38,7 +43,8 @@ const handleSubmit = async (e) => {
         const requestOptions = {
             method: "POST",
             headers: {
-                "Content-Type": "application/json"
+                "Content-Type": "application/json",
+                "x-access-token": localStorage.getItem("token")
             },
             body: JSON.stringify(currentState)
         }
@@ -60,12 +66,15 @@ console.log(currentState)
     }
 }
 
+
+
 //fetching all birthdays from birthday book
 useEffect(() => {
     getBirthdays()
     //make this a better error
 }, [])
 // console.log(birthdays)
+
 
 return (
         <div className="dashboard-container">
@@ -128,9 +137,11 @@ return (
                 {birthdays.map((person)=>{
                     const dateConversion = moment(person.birthday).format("dddd, MMM Do")
                     return (
+                        
                         <Link  key={person._id} to={`/dashboard/birthdaybook/${person._id}`}>
                         <BirthdayCard _id={person._id} firstName={person.firstName} lastName={person.lastName} birthday={dateConversion} />
                         </Link>
+                        
                     )
                 }
                 )}

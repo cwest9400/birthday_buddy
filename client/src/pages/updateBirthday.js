@@ -51,10 +51,29 @@ export default function UdpateBirthday(props) {
             console.log(err)
         }
     }
-
+    
+    
+    const deleteBirthday = async (e) => {
+        try {
+            const options = {
+                method: "DELETE"
+            }
+            const response = await fetch(URL, options)
+            const deletedBirthday = await response.json()
+            console.log(deletedBirthday)
+            navigate(`/dashboard/birthdaybook`)
+            
+        }catch (err) {
+            console.log(err)
+        }
+    }
+    
     useEffect(() => {
         getBirthday()
+        
     }, [])
+
+
     return (
         <div>
             <Link to={`/dashboard/birthdaybook/`}><h3>back to birthday book</h3></Link>
@@ -105,7 +124,8 @@ export default function UdpateBirthday(props) {
                     </div>
             </form>
 
-
+<h2>Delete birthday</h2>
+<button onClick={deleteBirthday}>delete</button>
 
         </div>
     )

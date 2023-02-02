@@ -1,17 +1,23 @@
-import { Link } from "react-router-dom"
+import { Link, Navigate } from "react-router-dom"
 import DateCard from "../components/dateCard"
 import { useState, useEffect } from "react"
 import "../style/cssDev.css"
 import moment from "moment"
+
 
 export default function Dashboard() {
     const URL = "http://127.0.0.1:4000/birthdays"
     const [birthdays, setBirthdays] = useState([])
     
     useEffect(() => {
-        fetch(URL)
+        fetch(URL, {
+            headers: {
+                "x-access-token": localStorage.getItem("token")
+            }
+        })
             .then((res) => res.json())
             .then((json) => {
+                console.log(json)
                 setBirthdays(json)
             })
             .catch(console.error)
@@ -20,11 +26,16 @@ export default function Dashboard() {
     // console.log(birthdays)
 
     
+    // const logout = async () => {
+    //     localStorage.removeItem("token")
+    //     Navigate("/")
 
+    // }
 
 
     return (
         <div className="dashboard-container">
+            {/* <button onClick={logout()}>sign out</button> */}
             <h1>Dashboard</h1>
             <h3>Hi User! Welcome to your dashboard</h3>
             <p>Here you can see upcoming birthdays and add new birthdays.</p>

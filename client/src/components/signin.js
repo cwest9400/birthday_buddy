@@ -26,30 +26,32 @@ export default function SignIn() {
         })
             .then(res => res.json())
             .then(data => {
+                console.log(data)
                 localStorage.setItem("token", data.token)
+                navigate("/dashboard")
             })
         }
 
 
-        useEffect(() => {
-            fetch("http://127.0.0.1:4000/isUserAuth", {
-                headers: {
-                    "x-access-token": localStorage.getItem("token")
-                }
-            })
-                .then(res => res.json())
-                .then(data => data.isLoggedIn ? navigate("/dashboard") : null)
+        // useEffect(() => {
+        //     fetch("http://127.0.0.1:4000/isUserAuth", {
+        //         headers: {
+        //             "x-access-token": localStorage.getItem("token")
+        //         }
+        //     })
+        //         .then(res => res.json())
+        //         .then(data => data.isLoggedIn ? navigate("/dashboard") : null)
                 
-        }, [])
+        // }, [])
     return (
         <div>
             <h1>Sign in</h1>
             <form onSubmit={event => handleLogin(event)}>
 
                 <p>Email</p>
-                <input required type="email" />
+                <input required type="email" autoComplete='false'/>
                 <p>Password</p>
-                <input required type="password" />
+                <input required type="password"  autoComplete='false'/>
 
                 <input type="submit" value="sign in" />
             </form>
