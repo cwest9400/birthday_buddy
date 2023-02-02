@@ -11,7 +11,11 @@ export default function UdpateBirthday(props) {
         birthday: "",
     })
     const { id } = useParams()
-    const URL = `http://127.0.0.1:4000/birthdays/${id}`
+    
+    //local testing use: `http://127.0.0.1:4000/birthdays/${id}`
+    
+    const URL = `https://birthdaybuddy.herokuapp.com/${id}`
+    
     const navigate = useNavigate()
 
     const getBirthday = async () => {

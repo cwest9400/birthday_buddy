@@ -21,10 +21,20 @@
 - auth
     - finish backend stuff
         - **DONE** > create and login working in postman
-        - JWT require on routes
+            - blocker (thanks Joshua)
     - front end stuff (connecting routes)
-        - connect sign in form to post
-        - connect register form to post
+        - **DONE** > connect sign in form to post
+            - blocker (thanks Joshua)
+        - **DONE** > connect register form to post
+
+## thursday, feb 02
+- **DONE** > review project requirements
+- **DONE** > deploy backend
+    - **DONE** > blocker: heroku error: Module not found (User model).
+- deploy frontend 
+- light styling
+- sorting birthdays on dashboard
+- readme block out
 
 ## loose ends
 - format date on update birthday page

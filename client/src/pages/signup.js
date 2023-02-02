@@ -22,7 +22,8 @@ export default function SignUp() {
             password: form[3].value
         }
         //refactor
-        fetch("http://127.0.0.1:4000/register", {
+        //local testing use: "http://127.0.0.1:4000/register"
+        fetch("https://birthdaybuddy.herokuapp.com/register", {
             method: "POST",
             headers: {
                 "Content-type": "application/json"

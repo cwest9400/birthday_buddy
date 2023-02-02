@@ -6,7 +6,9 @@ export default function BirthdayCard(props) {
     const lName = props.lastName
     const birthday = props.birthday
     const id = props._id
-    const URL = `http://127.0.0.1:4000/birthdays/${id}`
+    
+    // local testing use: const URL = `http://127.0.0.1:4000/birthdays/${id}`
+    const URL = `https://birthdaybuddy.herokuapp.com/birthdays/${id}`
     
     
     // const deleteBirthday = async (e) => {
