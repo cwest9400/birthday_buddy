@@ -19,11 +19,11 @@ const navigate = useNavigate()
                 </button>
             </div>
 
-            <div>
+            {/* <div>
             <Link to={'/dashboard/birthdaybook'}>
                     <img className ="birthdaybook-icon" src={birthdaybooklogo} alt ="birthday book"/>
                 </Link>
-            </div>
+            </div> */}
 
         </nav>
     )

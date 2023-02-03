@@ -84,12 +84,14 @@ return (
             <h3 className="dashboard-welcome">Welcome to your birthday book</h3>
             <p className="dashboard-desc">Here you can see all of your birthday buddies, add new birthdays, update or delete birthdays.</p>
             <div className="dashboard-nav">
+                <p>
                 <Link to={'/dashboard'}>
-                <button> back to dashboard</button>
+                <button id="green-button">dashboard</button>
                 </Link>
+                </p>
                 <h3> add a new birthday</h3>
                 <div className="add-birthday-container">
-                <form onSubmit={handleSubmit}>
+                <form className="add-form" onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="firstName">
                             First name<br></br>
@@ -101,12 +103,13 @@ return (
                                 value={newBirthday.firstName}
                                 onChange={handleChange}
                                 maxlength="14"
+                                required
                                 />
                         </label>
                     </div>
                     <div>
                         <label htmlFor="lastName">
-                            Last Name<br></br>
+                           <p> Last Name<br></br>
                             <input
                                 type="text"
                                 id="lastName"
@@ -116,6 +119,7 @@ return (
                                 onChange={handleChange}
                                 maxlength="14"
                                 />
+                                </p>
                         </label>
                     </div>
                     <div>
@@ -133,7 +137,9 @@ return (
                                 
                         </label>
                     </div>
-                    <input id="green-button" type="submit" value="add" />
+                    <p>
+                        <input id="green-button" type="submit" value="add" />
+                        </p>
                 </form>
                 </div>
             </div>

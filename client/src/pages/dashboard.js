@@ -35,12 +35,12 @@ export default function Dashboard() {
             <h3 className="dashboard-welcome">Welcome to your dashboard</h3>
             <p className="dashboard-desc">Here, you can see upcoming birthdays.</p>
             <div className="dashboard-nav">
-
-                {/* <Link to={'/dashboard/birthdaybook'}>
+        
+            <Link to={'/dashboard/birthdaybook'}>
                     <img className ="birthdaybook-icon" src={birthdaybooklogo} alt ="birthday book"/>
+                </Link>
+            
                 
-                    
-                </Link> */}
             </div>
             <h2>up coming birthdays</h2>
             <div className="date-container">
