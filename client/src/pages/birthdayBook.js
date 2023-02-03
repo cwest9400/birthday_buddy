@@ -80,9 +80,9 @@ useEffect(() => {
 
 return (
         <div className="dashboard-container">
-            <h1>Dashboard</h1>
-            <h3>Hi User! Welcome to your birthday book</h3>
-            <p>Here you can see all of your birthday buddies, add new birthdays, update or delete birthdays.</p>
+            <h1 className="dashboard-title">Birthday Book</h1>
+            <h3 className="dashboard-welcome">Welcome to your birthday book</h3>
+            <p className="dashboard-desc">Here you can see all of your birthday buddies, add new birthdays, update or delete birthdays.</p>
             <div className="dashboard-nav">
                 <Link to={'/dashboard'}>
                 <button> back to dashboard</button>
@@ -135,7 +135,7 @@ return (
                 
             </div>
             <h2>Birthday book</h2>
-            <div className="date-container">
+            <div className="birthday-card-container">
                 {birthdays.map((person)=>{
                     
                     const dateConversion = moment.utc(person.birthday).format("dddd, MMM Do")

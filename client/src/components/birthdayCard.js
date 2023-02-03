@@ -29,10 +29,10 @@ export default function BirthdayCard(props) {
     return (
         
         // bdaycard and date card will have the same styling probably
-        <div className="date-card"> 
+        <div className="birthday-card"> 
             <p>{fName} {lName}</p>
             <p>{birthday}</p>
-            <p>{id}</p>
+            
             
             {/* <button onClick={deleteBirthday}>delete</button> */}
 

@@ -17,7 +17,7 @@ export default function Landing() {
                 
             Introducing Birthday Buddy, the app that helps you keep track of all your loved ones' birthdays and never miss a celebration again.
             <p>Inspired by the thoughtfulness of a beloved aunt who has been sending birthday cards every year, this app is designed to simplify your life and bring a little more joy to those special occasions.</p>
-             With its user-friendly interface, Birthday Tracker ensures that you'll never forget a birthday, even if your memory fails you.
+             With its user-friendly interface, Birthday Buddy ensures that you'll never forget a birthday, even if your memory fails you.
             </div>
         </div>
     )

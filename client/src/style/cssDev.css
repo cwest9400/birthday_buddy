@@ -5,13 +5,16 @@ body {
 nav {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
     gap: 20px;
+
 }
 
 a {
     text-decoration: none;
     color: black;
 }
+
 .sign-in-title {
     text-align: center;
     font-weight: 200;
@@ -75,7 +78,59 @@ input {
     display: flex;
     gap: 24px;
     flex-wrap: wrap;
+    max-width: 400px;
 }
 .date-card {
-    background-color: gainsboro;
+    margin: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: #d1bae2;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+.date-card-date {
+    margin: 0;
+    font-weight: 500;
+    
+}
+.date-card-name {
+    margin: 0;
+    font-weight: 300;
+
+}
+.birthday-card-container {
+    display: flex;
+    justify-content: center;
+    gap: 24px;
+    flex-wrap: wrap;
+    max-width: 400px;
+    overflow: hidden;
+}
+.birthday-card {
+    margin: 0;
+    display: flex;
+    width: 100%;
+    flex-direction: column;
+    background-color: #d1bae2;
+    padding: 4px 8px;
+    border-radius: 8px;
+}
+
+/* dashboard styling */
+.dashboard-title {
+    padding: 24px 0 24px 0;
+}
+.dashboard-welcome {
+    margin-bottom: 0;
+}
+.dashboard-desc {
+    font-weight: 200;
+    color: rgb(0, 0, 0);
+    margin: 0 0 0 0;
+}
+.birthdaybook-icon {
+    width: 90px;
+    height: auto;
 }

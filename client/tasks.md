@@ -31,10 +31,20 @@
 - **DONE** > review project requirements
 - **DONE** > deploy backend
     - **DONE** > blocker: heroku error: Module not found (User model).
-- deploy frontend 
-- light styling
-- sorting birthdays on dashboard
+- **DONE** > deploy frontend 
+- **DONE** > landing page styling
+
+## friday, feb 03
+- dashboard styling
+- birthday book styling
+- sign up styling
+- edit birthday styling
 - readme block out
+- conditional rendering of header
+- sorting birthdays on dashboard
+- look for error handling opportunities
+    - loading spinner?
+
 
 ## loose ends
 - format date on update birthday page

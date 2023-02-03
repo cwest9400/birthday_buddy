@@ -1,8 +1,9 @@
-import { Link, Navigate } from "react-router-dom"
+import { Link } from "react-router-dom"
 import DateCard from "../components/dateCard"
 import { useState, useEffect } from "react"
 import "../style/cssDev.css"
 import moment from "moment"
+import birthdaybooklogo from '../images/birthdaybooklogo.png'
 
 
 export default function Dashboard() {
@@ -26,27 +27,20 @@ export default function Dashboard() {
             .catch(console.error)
         //make this a better error
     }, [])
-    // console.log(birthdays)
-
-    
-    // const logout = async () => {
-    //     localStorage.removeItem("token")
-    //     Navigate("/")
-
-    // }
-
 
     return (
         <div className="dashboard-container">
-            {/* <button onClick={logout()}>sign out</button> */}
-            <h1>Dashboard</h1>
-            <h3>Hi User! Welcome to your dashboard</h3>
-            <p>Here you can see upcoming birthdays and add new birthdays.</p>
+            <h1 className="dashboard-title">Dashboard</h1>
+
+            <h3 className="dashboard-welcome">Welcome to your dashboard</h3>
+            <p className="dashboard-desc">Here, you can see upcoming birthdays.</p>
             <div className="dashboard-nav">
 
-                <Link to={'/dashboard/birthdaybook'}>
-                    <button> birthday book</button>
-                </Link>
+                {/* <Link to={'/dashboard/birthdaybook'}>
+                    <img className ="birthdaybook-icon" src={birthdaybooklogo} alt ="birthday book"/>
+                
+                    
+                </Link> */}
             </div>
             <h2>up coming birthdays</h2>
             <div className="date-container">
