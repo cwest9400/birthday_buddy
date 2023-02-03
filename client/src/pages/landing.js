@@ -1,28 +1,23 @@
 import { Link } from "react-router-dom"
 import SignIn from "../components/signin"
+// import background from "../images/"
+
 
 export default function Landing() {
     return (
         <div className="landing-container">
-            <h1>birthday buddy</h1>
+            <h1 className="title">birthday buddy</h1>
+            
             <div>
                 <SignIn />
+                    
             </div>
-            <div className="cta-container">
-                <div className="left-side">
-                    <Link to={'/dashboard'}>
-                        <h2>devmode</h2>
-                        shortcut to dashboard
-                    </Link>
-                </div>
-                <div className="right-side">
-                    <Link to={'/signup'}>
-                        <h2>sign up</h2>
-                    </Link>
-                </div>
-            </div>
+            
             <div className="about">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+                
+            Introducing Birthday Buddy, the app that helps you keep track of all your loved ones' birthdays and never miss a celebration again.
+            <p>Inspired by the thoughtfulness of a beloved aunt who has been sending birthday cards every year, this app is designed to simplify your life and bring a little more joy to those special occasions.</p>
+             With its user-friendly interface, Birthday Tracker ensures that you'll never forget a birthday, even if your memory fails you.
             </div>
         </div>
     )

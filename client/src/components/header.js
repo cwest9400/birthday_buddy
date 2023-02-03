@@ -12,9 +12,7 @@ const navigate = useNavigate()
     
     return (
         <nav>
-            <div>about</div>
-            <div>sign in</div>
-            /
+           
             <div>
                 <button onClick={logout}>
                     sign out

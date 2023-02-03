@@ -1,17 +1,17 @@
 
-import { useNavigate } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
 
 
 
 
 export default function SignIn() {
     const navigate = useNavigate()
-  
-    
-    
+
+
+
     function handleLogin(e) {
         e.preventDefault()
-        
+
         const form = e.target
         const user = {
             // refactor
@@ -32,19 +32,25 @@ export default function SignIn() {
                 localStorage.setItem("token", data.token)
                 navigate("/dashboard")
             })
-        }
+    }
 
     return (
-        <div>
-            <h1>Sign in</h1>
+        <div className='sign-in'>
+            <p className='sign-in-title'>Sign in</p>
             <form onSubmit={event => handleLogin(event)}>
 
-                <p>Email</p>
-                <input required type="email" autoComplete='false'/>
-                <p>Password</p>
-                <input required type="password"  autoComplete='false'/>
-
-                <input type="submit" value="sign in" />
+                <p>Email<br></br>
+                    <input required type="email" autoComplete='false' />
+                </p>
+                Password<br></br>
+                <input required type="password" autoComplete='false' />
+                <div className='cta-container'>
+                    <p><input id="green-button" type="submit" value="sign in" />
+                        <Link to={'/register'}>
+                            sign up
+                        </Link>
+                    </p>
+                </div>
             </form>
         </div>
     )
