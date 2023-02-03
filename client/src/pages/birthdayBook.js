@@ -99,6 +99,7 @@ return (
                                 placeholder="*First Name"
                                 value={newBirthday.firstName}
                                 onChange={handleChange}
+                                maxlength="14"
                                 />
                         </label>
                     </div>
@@ -112,6 +113,7 @@ return (
                                 placeholder="Last Name"
                                 value={newBirthday.lastName}
                                 onChange={handleChange}
+                                maxlength="14"
                                 />
                         </label>
                     </div>
@@ -127,7 +129,7 @@ return (
                                 value={newBirthday.birthday}
                                 onChange={handleChange}
                                 />
-                                *just pick the month and date, the year doesn't matter.
+                                
                         </label>
                     </div>
                     <input type="submit" value="add to your birthday book" />

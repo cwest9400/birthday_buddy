@@ -30,7 +30,8 @@ export default function BirthdayCard(props) {
         
         // bdaycard and date card will have the same styling probably
         <div className="birthday-card"> 
-            <p>{fName} {lName}</p>
+            <p className="date-card-date">{fName}</p>
+            <p className="date-card-date">{lName}</p>
             <p>{birthday}</p>
             
             
