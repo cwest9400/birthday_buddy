@@ -45,11 +45,14 @@ export default function SignIn() {
                 Password<br></br>
                 <input required type="password" autoComplete='false' />
                 <div className='cta-container'>
-                    <p><input id="green-button" type="submit" value="sign in" />
-                        <Link to={'/register'}>
-                            sign up
-                        </Link>
+                    <p>
+                        <input className="green-button" type="submit" value="sign in" />
                     </p>
+                   <Link to={'/register'}>
+                        sign up
+                    </Link>
+                    
+
                 </div>
             </form>
         </div>

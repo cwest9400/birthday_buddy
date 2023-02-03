@@ -9,10 +9,10 @@ import { useNavigate } from 'react-router-dom'
 
 export default function SignUp() {
     const navigate = useNavigate()
-    
+
     function handleLogin(e) {
         e.preventDefault()
-        
+
         const form = e.target
         const user = {
             // refactor
@@ -36,46 +36,33 @@ export default function SignUp() {
                 localStorage.setItem("token", data.token)
                 navigate("/dashboard")
             })
-        }
+    }
 
     return (
-        <div>
+        <div className="signup-container">
             <h1>Sign Up</h1>
             <form onSubmit={event => handleLogin(event)}>
 
-                <p>firstName</p>
-                <input required type="text" autoComplete='false'/>
-                <p>lastName</p>
-                <input type="text" autoComplete='false'/>
-                <p>Email</p>
-                <input required type="email" autoComplete='false'/>
-                <p>Password</p>
-                <input required type="password"  autoComplete='false'/>
-
-                <input type="submit" value="sign in" />
+                <p>
+                    First name
+                    <br></br>
+                    <input required type="text" autoComplete='false' />
+                </p>
+                Last name
+                <br></br>
+                <input type="text" autoComplete='false' />
+                <p>
+                    Email
+                    <br></br>
+                    <input required type="email" autoComplete='false' />
+                </p>
+                Password
+                <br></br>
+                <input required type="password" autoComplete='false' />
+                <p>
+                    <input className="green-button" type="submit" value="sign up" />
+                </p>
             </form>
         </div>
     )
 }
-
-// export default function SignUp() {
-    
-
-//     return (
-//         <div>
-//             <h1>sign up form</h1>
-//             <form>
-//                 <p>First Name</p>
-//                 <input/>
-//                 <p>Last Name</p>
-//                 <input/>
-//                 <p>Email</p>
-//                 <input/>
-//                 <p>Password</p>
-//                 <input/>
-                
-//                 <input type="submit" value="sign up"/>
-//             </form>
-//         </div>
-//     )
-// }
