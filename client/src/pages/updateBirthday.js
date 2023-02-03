@@ -80,13 +80,13 @@ export default function UdpateBirthday(props) {
 
     return (
         <div>
-            <Link to={`/dashboard/birthdaybook/`}><h3>back to birthday book</h3></Link>
+            <Link to={`/dashboard/birthdaybook/`}>
+                <button className="green-button">birthday book</button></Link>
             <h2>update birthday</h2>
-       
+       <div className="update-birthday-container">
             <form onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="firstName">
-                        {/* <p>{birthday.firstName}</p> */}
                         <input
                             type="text"
                             id="firstName"
@@ -99,7 +99,7 @@ export default function UdpateBirthday(props) {
                 </div>
                 <div>
                     <label htmlFor="lastName">
-                        {/* <p>{birthday.lastName}</p> */}
+                        <p>
                         <input
                             type="text"
                             id="lastName"
@@ -108,12 +108,13 @@ export default function UdpateBirthday(props) {
                             value={editBirthday.lastName}
                             onChange={handleChange}
                         />
+                        </p>
                     </label>
                 </div>
                 <div>
                         <label htmlFor="birthday">
-                            <p>{birthday.birthday}</p>
-                            <input
+                            
+                            <p><input
                                 required={true}
                                 type="date"
                                 id="birthday"
@@ -122,14 +123,16 @@ export default function UdpateBirthday(props) {
                                 value={moment.utc(editBirthday.birthday).format('yyyy-MM-DD')}
                                 onChange={handleChange}
                                 />
-                                <p>*just pick the month and date, the year doesn't matter.</p>
+                                </p>
+                                
                         </label>
-                        <input type="submit" value="update" />
+                        <p className="button-center"><input className="green-button" type="submit" value="update" /></p>
                     </div>
             </form>
+            </div>
 
-<h2>Delete birthday</h2>
-<button onClick={deleteBirthday}>delete</button>
+<h3 className="delete-title">Delete birthday</h3>
+<button className="sign-out-button" onClick={deleteBirthday}>delete</button>
 
         </div>
     )

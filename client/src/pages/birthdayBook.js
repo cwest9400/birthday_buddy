@@ -86,7 +86,7 @@ return (
             <div className="dashboard-nav">
                 <p>
                 <Link to={'/dashboard'}>
-                <button id="green-button">dashboard</button>
+                <button className="green-button">dashboard</button>
                 </Link>
                 </p>
                 <h3> add a new birthday</h3>
@@ -138,7 +138,7 @@ return (
                         </label>
                     </div>
                     <p>
-                        <input id="green-button" type="submit" value="add" />
+                        <input className="green-button" type="submit" value="add" />
                         </p>
                 </form>
                 </div>
