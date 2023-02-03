@@ -91,7 +91,7 @@ return (
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="firstName">
-                            First name
+                            First name<br></br>
                             <input
                                 type="text"
                                 id="firstName"
@@ -105,7 +105,7 @@ return (
                     </div>
                     <div>
                         <label htmlFor="lastName">
-                            Last Name
+                            Last Name<br></br>
                             <input
                                 type="text"
                                 id="lastName"
@@ -119,7 +119,7 @@ return (
                     </div>
                     <div>
                         <label htmlFor="birthday">
-                            Birthday
+                            Birthday<br></br>
                             <input
                                 required={true}
                                 type="date"
