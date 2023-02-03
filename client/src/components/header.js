@@ -14,7 +14,7 @@ const navigate = useNavigate()
         <nav>
            
             <div>
-                <button onClick={logout}>
+                <button className="sign-out-button" onClick={logout}>
                     sign out
                 </button>
             </div>

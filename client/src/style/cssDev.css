@@ -137,3 +137,12 @@ input {
     width: 90px;
     height: auto;
 }
+.sign-out-button {
+    background-color: #F38181;
+    border-radius: 8px;
+    border: none;
+    padding: 8px 16px;
+    font-family: poppins;
+    color: white;
+    margin-bottom: 8px;
+}

@@ -88,6 +88,7 @@ return (
                 <button> back to dashboard</button>
                 </Link>
                 <h3> add a new birthday</h3>
+                <div className="add-birthday-container">
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label htmlFor="firstName">
@@ -132,9 +133,9 @@ return (
                                 
                         </label>
                     </div>
-                    <input type="submit" value="add to your birthday book" />
+                    <input id="green-button" type="submit" value="add" />
                 </form>
-                
+                </div>
             </div>
             <h2>Birthday book</h2>
             <div className="birthday-card-container">

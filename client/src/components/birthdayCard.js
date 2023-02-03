@@ -32,7 +32,7 @@ export default function BirthdayCard(props) {
         <div className="birthday-card"> 
             <p className="date-card-date">{fName}</p>
             <p className="date-card-date">{lName}</p>
-            <p>{birthday}</p>
+            <p className="date-card-name">{birthday}</p>
             
             
             {/* <button onClick={deleteBirthday}>delete</button> */}
