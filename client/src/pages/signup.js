@@ -1,11 +1,5 @@
-// import { useState, useEffect } from 'react'
-
-
 
 import { useNavigate } from 'react-router-dom'
-
-
-
 
 export default function SignUp() {
     const navigate = useNavigate()
@@ -21,7 +15,7 @@ export default function SignUp() {
             email: form[2].value,
             password: form[3].value
         }
-        //refactor
+
         //local testing use: "http://127.0.0.1:4000/register"
         fetch("https://birthdaybuddy.herokuapp.com/register", {
             method: "POST",

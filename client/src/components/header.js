@@ -18,13 +18,6 @@ const navigate = useNavigate()
                     sign out
                 </button>
             </div>
-
-            {/* <div>
-            <Link to={'/dashboard/birthdaybook'}>
-                    <img className ="birthdaybook-icon" src={birthdaybooklogo} alt ="birthday book"/>
-                </Link>
-            </div> */}
-
         </nav>
     )
 }

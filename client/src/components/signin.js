@@ -1,13 +1,7 @@
-
 import { Link, useNavigate } from 'react-router-dom'
-
-
-
 
 export default function SignIn() {
     const navigate = useNavigate()
-
-
 
     function handleLogin(e) {
         e.preventDefault()
@@ -51,8 +45,6 @@ export default function SignIn() {
                    <Link to={'/register'}>
                         sign up
                     </Link>
-                    
-
                 </div>
             </form>
         </div>

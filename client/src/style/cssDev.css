@@ -1,6 +1,6 @@
 body {
   background-color: white;
-  margin: 2% 10% 10% 10%;
+  margin: 2% 20% 10% 20%;
 }
 nav {
   display: flex;
@@ -118,7 +118,6 @@ input {
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
-  /* max-width: 400px; */
   overflow: hidden;
 }
 .birthday-card {
@@ -135,8 +134,15 @@ input {
 }
 
 /* dashboard styling */
+.dashboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
 .dashboard-title {
   padding: 24px 0 24px 0;
+  
 }
 .dashboard-welcome {
   margin-bottom: 0;
@@ -149,6 +155,12 @@ input {
 .birthdaybook-icon {
   width: 90px;
   height: auto;
+}
+.dashboard-nav {
+    background-color: #e3f6ff;
+    width: max-content;
+    padding: 12px;
+    border-radius: 8px;
 }
 .sign-out-button {
   background-color: #f38181;
@@ -190,6 +202,9 @@ a:hover {
     opacity: 70%;
 }
 .sign-out-button:hover {
+    opacity: 70%;
+}
+.birthdaybook-icon:hover {
     opacity: 70%;
 }
 

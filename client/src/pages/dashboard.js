@@ -31,33 +31,25 @@ export default function Dashboard() {
     return (
         <div className="dashboard-container">
             <h1 className="dashboard-title">Dashboard</h1>
-
             <h3 className="dashboard-welcome">Welcome to your dashboard</h3>
             <p className="dashboard-desc">Here, you can see upcoming birthdays.</p>
             <div className="dashboard-nav">
-        
             <Link to={'/dashboard/birthdaybook'}>
                     <img className ="birthdaybook-icon" src={birthdaybooklogo} alt ="birthday book"/>
-                </Link>
-            
-                
+            </Link>
+            <br/><span className="dashboard-desc">Add, edit or remove birthdays</span>
             </div>
             <h2>up coming birthdays</h2>
             <div className="date-container">
                 
                 {birthdays.length>0 && birthdays.map((person) => {
-                    const dateConversion = moment(person.birthday).format("dddd, MMM Do")
-                    //countdown - fix it
-                    // const newDate = moment(person.birthday).endOf('day').fromNow();
+                    const dateConversion = moment.utc(person.birthday).format("dddd, MMM Do")
                     return (
                         <DateCard key={person._id} firstName={person.firstName} lastName={person.lastName} birthday={dateConversion} />
                     )
                 }
                 )}
-
-
             </div>
-
         </div>
     )
 }
