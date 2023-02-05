@@ -6,10 +6,13 @@ export default function BirthdayCard(props) {
     const id = props._id
 
     return (
-        <div className="birthday-card"> 
-            <p className="date-card-date">{fName}{lName}
+        <div className="birthday-card">
+            <p className="date-card-date">
+                {fName} {lName}
             </p>
-            <p className="date-card-name">{birthday}</p>
+            <p className="date-card-name">
+                {birthday}
+            </p>
         </div>
     )
 }

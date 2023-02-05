@@ -1,4 +1,3 @@
-
 import { useNavigate } from 'react-router-dom'
 
 export default function SignUp() {
@@ -36,7 +35,6 @@ export default function SignUp() {
         <div className="signup-container">
             <h1>Sign Up</h1>
             <form onSubmit={event => handleLogin(event)}>
-
                 <p>
                     First name
                     <br></br>

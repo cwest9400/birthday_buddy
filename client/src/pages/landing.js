@@ -1,4 +1,3 @@
-import { Link } from "react-router-dom"
 import SignIn from "../components/signin"
 
 export default function Landing() {

@@ -56,7 +56,6 @@ export default function UdpateBirthday(props) {
         }
     }
     
-    
     const deleteBirthday = async (e) => {
         try {
             const options = {
@@ -76,7 +75,6 @@ export default function UdpateBirthday(props) {
         getBirthday()
         
     }, [])
-
 
     return (
         <div>
@@ -113,7 +111,6 @@ export default function UdpateBirthday(props) {
                 </div>
                 <div>
                         <label htmlFor="birthday">
-                            
                             <p><input
                                 required={true}
                                 type="date"
@@ -124,17 +121,13 @@ export default function UdpateBirthday(props) {
                                 onChange={handleChange}
                                 />
                                 </p>
-                                
                         </label>
                         <p className="button-center"><input className="green-button" type="submit" value="update" /></p>
                     </div>
             </form>
             </div>
-
 <h3 className="delete-title">Delete birthday</h3>
 <button className="sign-out-button" onClick={deleteBirthday}>delete</button>
-
         </div>
     )
 }
-

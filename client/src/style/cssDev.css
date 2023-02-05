@@ -1,7 +1,8 @@
 body {
   background-color: white;
-  margin: 2% 20% 10% 20%;
+  margin: 2% 10% 10% 10%;
 }
+
 nav {
   display: flex;
   justify-content: flex-end;
@@ -14,11 +15,16 @@ a {
   color: black;
 }
 
+.header-top-right {
+    padding-right: 17% ;
+}
+
 .sign-in-title {
   text-align: center;
   font-weight: 200;
   font-size: 1.2em;
 }
+
 input {
   font-family: poppins;
   padding: 12px 20px;
@@ -40,6 +46,7 @@ input {
   background-repeat: no-repeat;
   background-position: top;
 }
+
 .signup-container {
   display: flex;
   flex-direction: column;
@@ -50,22 +57,26 @@ input {
   background-repeat: no-repeat;
   background-position: top;
 }
+
 .title {
   font-size: xx-large;
   padding-top: 72px;
 }
+
 .sign-in {
   display: grid;
   justify-content: center;
   align-items: center;
   margin: 0 auto;
 }
+
 .cta-container {
   display: flex;
   flex-direction: column;
   justify-content: center;
   
 }
+
 .green-button {
   background-color: #95e1d3;
   border: none;
@@ -73,6 +84,7 @@ input {
   font-weight: 700;
   font-size: 1.2em;
 }
+
 .button-center {
   display: flex;
   justify-content: center;
@@ -87,12 +99,14 @@ input {
   max-width: 400px;
   font-weight: 300;
 }
+
 .date-container {
   display: flex;
   gap: 24px;
   flex-wrap: wrap;
   max-width: 400px;
 }
+
 .date-card {
   margin: 0;
   display: flex;
@@ -109,17 +123,21 @@ input {
   margin: 0;
   font-weight: 500;
 }
+
 .date-card-name {
   margin: 0;
   font-weight: 300;
 }
+
 .birthday-card-container {
   display: flex;
   justify-content: space-between;
   gap: 16px;
   flex-wrap: wrap;
   overflow: hidden;
+  max-width: 600px;
 }
+
 .birthday-card {
   margin: 0;
   display: flex;
@@ -144,24 +162,29 @@ input {
   padding: 24px 0 24px 0;
   
 }
+
 .dashboard-welcome {
   margin-bottom: 0;
 }
+
 .dashboard-desc {
   font-weight: 200;
   color: rgb(0, 0, 0);
   margin: 0 0 24px 0;
 }
+
 .birthdaybook-icon {
   width: 90px;
   height: auto;
 }
+
 .dashboard-nav {
     background-color: #e3f6ff;
     width: max-content;
     padding: 12px;
     border-radius: 8px;
 }
+
 .sign-out-button {
   background-color: #f38181;
   border-radius: 8px;
@@ -171,16 +194,20 @@ input {
   color: white;
   margin-bottom: 8px;
 }
+
 /* birthdaybook */
 .add-birthday-container {
   display: flex;
   justify-content: center;
   background-color: #e3f6ff;
   border-radius: 8px;
+  width: 600px;
 }
+
 .add-form {
   padding: 16px 0;
 }
+
 .update-birthday-container {
   display: flex;
   justify-content: center;
@@ -192,22 +219,26 @@ input {
 .delete-title {
   margin-top: 36px;
 }
+
 a:hover {
     font-weight: 800;
 }
+
 .green-button:hover {
     opacity: 70%;
 }
+
 .sign-out-button:hover {
-    opacity: 70%;
-}
-.sign-out-button:hover {
-    opacity: 70%;
-}
-.birthdaybook-icon:hover {
     opacity: 70%;
 }
 
+.sign-out-button:hover {
+    opacity: 70%;
+}
+
+.birthdaybook-icon:hover {
+    opacity: 70%;
+}
 
 @media only all and (max-width: 684px) {
   /* For mobile phones: */

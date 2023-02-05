@@ -8,7 +8,6 @@ export default function SignIn() {
 
         const form = e.target
         const user = {
-            // refactor
             email: form[0].value,
             password: form[1].value
         }
@@ -33,16 +32,18 @@ export default function SignIn() {
             <p className='sign-in-title'>Sign in</p>
             <form onSubmit={event => handleLogin(event)}>
 
-                <p>Email<br></br>
+                <p>Email
+                    <br></br>
                     <input required type="email" autoComplete='false' />
                 </p>
-                Password<br></br>
+                Password
+                <br></br>
                 <input required type="password" autoComplete='false' />
                 <div className='cta-container'>
                     <p>
                         <input className="green-button" type="submit" value="sign in" />
                     </p>
-                   <Link to={'/register'}>
+                    <Link to={'/register'}>
                         sign up
                     </Link>
                 </div>
