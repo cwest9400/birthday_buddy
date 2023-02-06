@@ -28,14 +28,14 @@ export default function Dashboard() {
     const birthdayArray = birthdays
     console.log(birthdayArray)
 
-    function monthDaySlice() {
+    function standardizeYear() {
         for (let i = 0; i < birthdayArray.length; i++) {
             let object = birthdayArray[i]
-            let monthDay = object.birthday.slice(5, 10)
-            object.birthday = monthDay
+            let changeYear = "2023" + object.birthday.substring(4);
+            object.birthday = changeYear
         }
     }
-    monthDaySlice()
+    standardizeYear()
     console.log(birthdayArray)
 
     function compare(a, b) {
