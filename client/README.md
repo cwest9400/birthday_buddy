@@ -5,6 +5,10 @@ Introducing Birthday Buddy, the app that helps you keep track of all your loved 
 Inspired by the thoughtfulness of a beloved aunt who has been sending birthday cards every year, this app is designed to simplify your life and bring a little more joy to those special occasions.
 
 With its user-friendly interface, Birthday Buddy ensures that you'll never forget a birthday. <br>
+
+## The Problem
+Many people wish they sent more birthday recognitions. For people that don't use social media(facebook), there aren't many modern digital solutions.
+
 ## Try it out
 <a href="https://birthdaybuddy.netlify.app/"> Live site </a>
 ![My project-2](https://user-images.githubusercontent.com/116116801/216797186-06d1503b-916a-4efc-b07c-6d451a217804.png)
@@ -42,6 +46,37 @@ https://www.figma.com/proto/tcwPeR2HfihA5QedhobC9u/auntdebbie.com?node-id=1%3A2&
 
 ## ERD
 ![Screen Shot 2023-01-27 at 2 53 36 PM](https://user-images.githubusercontent.com/116116801/215184779-d1333941-1d63-413e-a627-3a4fd0eeae61.png)
+
+
+### Code that I am proud of:
+Dates are strange and funky to sort. I ran into a challenge when trying to sort the dates on the dashboard. I wanted the cards to sort only the month and day, and NOT the year. However, the year was throwing off the sort. My current solution is to change all the years to the current year, so they sort correctly.
+
+#### Solution:
+```
+//converts all years into 2023 for sorting
+
+   function standardizeYear(birthdayArray) {
+        for (let i = 0; i < birthdayArray.length; i++) {
+            let object = birthdayArray[i]
+            let changeYear = "2023" + object.birthday.substring(4);
+            object.birthday = changeYear
+        }
+        return birthdayArray
+    }
+    
+  //sort dates
+  
+    function compare(a, b) {
+        if (a.birthday < b.birthday) {
+            return -1;
+        }
+        if (a.birthday > b.birthday) {
+            return 1;
+        }
+        return 0;
+    }
+
+```
 
 ## Future Features
 - Sort filters for the birthday book page
