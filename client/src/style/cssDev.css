@@ -85,6 +85,16 @@ input {
   font-size: 1.2em;
 }
 
+.green-button-center {
+  background-color: #95e1d3;
+  border: none;
+  color: white;
+  font-weight: 700;
+  font-size: 1.2em;
+  display: flex;
+  justify-content: center;
+}
+
 .button-center {
   display: flex;
   justify-content: center;
@@ -180,7 +190,10 @@ input {
 
 .dashboard-nav {
     background-color: #e3f6ff;
-    width: max-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     padding: 12px;
     border-radius: 8px;
 }
@@ -201,7 +214,7 @@ input {
   justify-content: center;
   background-color: #e3f6ff;
   border-radius: 8px;
-  width: 600px;
+  width: 400px;
 }
 
 .add-form {
@@ -218,6 +231,12 @@ input {
 
 .delete-title {
   margin-top: 36px;
+}
+
+.align-left {
+  display: flex;
+  justify-content: left;
+  align-items: left;
 }
 
 a:hover {
@@ -257,4 +276,7 @@ a:hover {
   [class="date-card-name"] {
     width: 100%;
   }
+  [class="header-top-right"] {
+    padding-right: 10% ;
+}
 }

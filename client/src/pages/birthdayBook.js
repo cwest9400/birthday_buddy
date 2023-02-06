@@ -90,12 +90,12 @@ export default function BirthdayBook() {
             <h1 className="dashboard-title">Birthday Book</h1>
             <h3 className="dashboard-welcome">Welcome to your birthday book</h3>
             <p className="dashboard-desc">Here you can see all of your birthday buddies, add new birthdays, update or delete birthdays.</p>
-            <div className="dashboard-nav">
-                <p>
+                <p className="align-left">
                     <Link to={'/dashboard'}>
                         <button className="green-button">dashboard</button>
                     </Link>
                 </p>
+            <div className="dashboard-nav">
                 <h3> add a new birthday</h3>
                 <div className="add-birthday-container">
                     <form className="add-form" onSubmit={handleSubmit}>
@@ -142,10 +142,11 @@ export default function BirthdayBook() {
                                     onChange={handleChange}
                                 />
                             </label>
+                        <p></p>
                         </div>
-                        <p>
+                        <div>
                             <input className="green-button" type="submit" value="add" />
-                        </p>
+                            </div>
                     </form>
                 </div>
             </div>

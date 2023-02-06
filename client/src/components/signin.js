@@ -43,9 +43,7 @@ export default function SignIn() {
                     <p>
                         <input className="green-button" type="submit" value="sign in" />
                     </p>
-                    <Link to={'/register'}>
-                        sign up
-                    </Link>
+                   <div> No account? <Link to={'/register'}><span style={{color: "#95e1d3"}}>sign up</span></Link></div>
                 </div>
             </form>
         </div>
