@@ -35,18 +35,18 @@
 - **DONE** > landing page styling
 
 ## friday, feb 03
-- dashboard styling
-- birthday book styling
-- sign up styling
-- edit birthday styling
-- readme block out
-- conditional rendering of header
-- sorting birthdays on dashboard
-- look for error handling opportunities
-    - loading spinner?
+- **DONE** > dashboard styling
+- **DONE** > birthday book styling
+- **DONE** > sign up styling
+- **DONE** > edit birthday styling
+- **DONE** > readme block out
+- **DONE** > conditional rendering of header
+- **DONE** > sorting birthdays on dashboard
+
 
 
 ## loose ends
-- format date on update birthday page
-- sort dashboard by closest date
+- conditional for loading header content based on isLoggedIn
+- look for error handling opportunities
+    - loading spinner?
 - Delete button on updateBirthday is throwing error but still working

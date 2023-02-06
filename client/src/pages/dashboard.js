@@ -19,25 +19,22 @@ export default function Dashboard() {
         })
             .then((res) => res.json())
             .then((json) => {
-                console.log(json)
-                setBirthdays(json)
+                const cleanedBirthdays = standardizeYear(json);
+                setBirthdays(cleanedBirthdays.sort(compare));
             })
             .catch(console.error)
     }, [])
-    console.log(birthdays)
-    const birthdayArray = birthdays
-    console.log(birthdayArray)
-
-    function standardizeYear() {
+    
+    //converts all years into 2023 for sorting
+    function standardizeYear(birthdayArray) {
         for (let i = 0; i < birthdayArray.length; i++) {
             let object = birthdayArray[i]
             let changeYear = "2023" + object.birthday.substring(4);
             object.birthday = changeYear
         }
+        return birthdayArray
     }
-    standardizeYear()
-    console.log(birthdayArray)
-
+  //sort dates
     function compare(a, b) {
         if (a.birthday < b.birthday) {
             return -1;
@@ -47,9 +44,6 @@ export default function Dashboard() {
         }
         return 0;
     }
-
-    console.log(birthdayArray.sort(compare))
-    console.log(birthdays)
 
     return (
         <div className="dashboard-container">
